@@ -1,0 +1,509 @@
+/* Toàn bộ trang */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('./img/wallpapersden.com_76996-1920x1080.jpg') no-repeat center center fixed;
+    background-size: cover; /* Phủ toàn màn hình */
+    color: #fff; /* Màu chữ trắng */
+}
+
+/* Header */
+.header {
+    text-align: center;
+   
+    color: white;
+    padding: 20px 0;
+}
+
+.header .profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: url('./img/header/429959526_679847344362555_7222125135319867746_n.jpg') no-repeat center center;
+    background-size: cover; /* Đảm bảo ảnh phủ kín */
+    margin: 0 auto 10px; /* Căn giữa theo chiều ngang */
+}
+
+
+.header .name {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.header .title {
+    font-size: 25px;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.header .social-icons a {
+    font-size: 30px;
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.header .social-icons a:hover {
+    color: #4CAF50; /* Màu xanh lá khi hover */
+}
+
+/* Kiểu dáng cho thanh điều hướng */
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Khoảng cách giữa các nút */
+    margin: 20px 0;
+}
+
+/* Kiểu dáng cơ bản cho nút */
+.nav-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px; /* Bo góc */
+    background: linear-gradient(45deg, #4CAF50, #2E7D32); /* Màu nền mặc định */
+    transition: all 0.3s ease; /* Hiệu ứng chuyển động */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Đổ bóng */
+}
+
+/* Nút khi không được chọn */
+.nav-button:not(.active) {
+    background: linear-gradient(45deg, #ece6e6, #161516); /* Gradient cho nút không được chọn */
+    opacity: 0.8; /* Làm mờ nhẹ */
+}
+
+/* Hiệu ứng hover */
+.nav-button:hover {
+    transform: translateY(-3px); /* Nâng nút lên khi rê chuột */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Tăng độ đổ bóng */
+    opacity: 1; /* Làm rõ nút */
+}
+
+/* Nút đang được chọn (active) */
+.nav-button.active {
+    background: linear-gradient(45deg, #5a1136, #e72787); /* Gradient nổi bật */
+    transform: scale(1.1); /* Phóng to nhẹ */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4); /* Đổ bóng mạnh hơn */
+}
+
+/* Hiệu ứng khi nhấn nút */
+.nav-button:active {
+    transform: translateY(2px); /* Hạ nút xuống */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Giảm độ đổ bóng */
+}
+
+
+/* Nội dung các bảng */
+.content-panel {
+    display: none; /* Ẩn bảng theo mặc định */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Nền trắng trong suốt */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px; /* Giới hạn chiều rộng bảng */
+    color: #333; /* Màu chữ đậm */
+}
+
+/* Hiển thị bảng khi có class active */
+.content-panel.active {
+    display: block;
+}
+
+/* Danh sách các nút trong bảng */
+.button-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Khoảng cách giữa các nút */
+}
+
+/* Nút trong danh sách */
+.custom-button {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.8); /* Màu nền đen mờ */
+    border-radius: 10px; /* Bo tròn góc */
+    padding: 10px 20px; /* Khoảng cách bên trong */
+    color: white; /* Màu chữ */
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Đổ bóng */
+    transition: all 0.3s ease; /* Hiệu ứng hover */
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Viền mờ */
+}
+
+/* Hiệu ứng hover */
+.custom-button:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Màu nền đổi khi hover */
+    transform: scale(1.05); /* Phóng to nhẹ */
+    border: 2px solid white; /* Viền rõ hơn */
+}
+
+/* Định dạng cho hình ảnh (icon) */
+.button-icon {
+    width: 50px; /* Kích thước icon */
+    height: 50px;
+    border-radius: 50%; /* Bo tròn hình ảnh */
+    margin-right: 15px; /* Khoảng cách giữa icon và nội dung */
+    object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Viền icon */
+}
+
+/* Nội dung của nút */
+.button-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Tiêu đề chính */
+.button-title {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+/* Phụ đề */
+.button-subtitle {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7); /* Màu chữ phụ đề nhạt hơn */
+}
+
+/* Ẩn các panel mặc định */
+.content-panel {
+    display: none;
+}
+
+/* Hiển thị panel khi có class "active" */
+.content-panel.active {
+    display: block;
+}
+
+/* Định dạng các nút trong thanh điều hướng */
+.nav {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.nav-button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #333;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* Nút được chọn */
+.nav-button.active {
+    background-color: #6200ea; /* Màu tím */
+    color: white;
+    border-color: #6200ea;
+}
+
+/* Ẩn các panel mặc định */
+.content-panel {
+    display: none;
+}
+
+/* Hiển thị panel khi có class "active" */
+.content-panel.active {
+    display: block;
+}
+
+/* Định dạng các nút trong thanh điều hướng */
+.nav {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.nav-button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #333;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* Nút được chọn */
+.nav-button.active {
+    background-color: #6200ea; /* Màu tím */
+    color: white;
+    border-color: #6200ea;
+}
+
+/* Định dạng các nút trong panel */
+.custom-button {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.custom-button:hover {
+    background-color: #e0e0e0;
+}
+
+.button-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.button-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-title {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.button-subtitle {
+    font-size: 14px;
+    color: #666;
+}
+
+
+/* Nền của các panel */
+.content-panel {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* Tiêu đề của panel */
+.content-panel h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Định dạng chung cho các nút */
+.custom-button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+    margin: 15px 0;
+    padding: 15px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-family: Arial, sans-serif;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon của nút */
+.custom-button .button-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5px;
+    object-fit: cover;
+}
+
+/* Nội dung của nút */
+.custom-button .button-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-button .button-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.custom-button .button-subtitle {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Hiệu ứng hover cho nút */
+.custom-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Hiệu ứng khi nhấn nút */
+.custom-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive cho màn hình nhỏ hơn 768px (điện thoại và máy tính bảng nhỏ) */
+@media (max-width: 768px) {
+    /* Header */
+    .header {
+        padding: 10px 0;
+    }
+
+    .header .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .header .name {
+        font-size: 24px;
+    }
+
+    .header .title {
+        font-size: 18px;
+    }
+
+    .header .social-icons a {
+        font-size: 24px;
+        margin: 0 5px;
+    }
+
+    /* Nút điều hướng */
+    .nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav .nav-button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    /* Content Panel */
+    .content-panel {
+        max-width: 95%;
+        padding: 15px;
+    }
+
+    /* Nút trong bảng */
+    .custom-button {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .custom-button .button-icon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 10px;
+    }
+
+    .custom-button .button-title {
+        font-size: 16px;
+    }
+
+    .custom-button .button-subtitle {
+        font-size: 12px;
+    }
+}
+
+/* Responsive cho màn hình nhỏ hơn 480px (điện thoại nhỏ) */
+@media (max-width: 480px) {
+    /* Header */
+    .header .name {
+        font-size: 20px;
+    }
+
+    .header .title {
+        font-size: 16px;
+    }
+
+    /* Nút điều hướng */
+    .nav .nav-button {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    /* Nút trong bảng */
+    .custom-button {
+        padding: 8px;
+    }
+
+    .custom-button .button-title {
+        font-size: 14px;
+    }
+
+    .custom-button .button-subtitle {
+        font-size: 12px;
+    }
+}
+
+/* Responsive cho màn hình lớn hơn 1200px (PC lớn) */
+@media (min-width: 1200px) {
+    /* Header */
+    .header .profile-image {
+        width: 180px;
+        height: 180px;
+    }
+
+    .header .name {
+        font-size: 36px;
+    }
+
+    .header .title {
+        font-size: 28px;
+    }
+
+    .header .social-icons a {
+        font-size: 36px;
+    }
+
+    /* Content Panel */
+    .content-panel {
+        max-width: 1000px;
+        padding: 30px;
+    }
+
+    /* Nút trong bảng */
+    .custom-button {
+        padding: 20px;
+    }
+
+    .custom-button .button-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .custom-button .button-title {
+        font-size: 20px;
+    }
+
+    .custom-button .button-subtitle {
+        font-size: 16px;
+    }
+}
