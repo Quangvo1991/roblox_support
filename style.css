@@ -25,6 +25,10 @@ body {
     margin: 0 auto 10px; /* Căn giữa theo chiều ngang */
 }
 
+.header .profile-image:hover {
+    transform: scale(1.2);
+}
+
 
 .header .name {
     font-size: 30px;
@@ -47,7 +51,8 @@ body {
 }
 
 .header .social-icons a:hover {
-    color: #4CAF50; /* Màu xanh lá khi hover */
+    color: #4CAF50;
+    transform: scale(1.2);
 }
 
 /* Kiểu dáng cho thanh điều hướng */
@@ -289,7 +294,7 @@ body {
 
 /* Nền của các panel */
 .content-panel {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.3);
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -301,7 +306,7 @@ body {
 
 /* Tiêu đề của panel */
 .content-panel h2 {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
     margin-bottom: 20px;
     text-align: center;

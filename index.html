@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./img/icon/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./img/header/429959526_679847344362555_7222125135319867746_n.jpg" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <!-- Header -->
@@ -15,9 +16,10 @@
         <div class="name">Võ Việt Quang</div>
         <div class="title">Lazy ROBLOX</div>
         <div class="social-icons">
-            <a href="https://www.tiktok.com" target="_blank" class="fa-brands fa-tiktok"></a>
+           
+            <a href="https://www.tiktok.com" target="_blank" class="fab fa-tiktok"></a>  
             
-            <a href="https://www.facebook.com/ziwan2007/" target="_blank" class="ti-facebook"></a>
+            <a href="https://www.facebook.com/ziwan2007/" target="_blank" class="fab fa-facebook"></a>
         </div>
     </div>
 
@@ -25,9 +27,12 @@
     <div class="nav">
         <a href="#pc" class="nav-button active" onclick="showPanel('pc', this)">PC</a>
         <a href="#script" class="nav-button" onclick="showPanel('script', this)">Script</a>
+        <a href="#android" class="nav-button" onclick="showPanel('android', this)">Android</a>
+        <a href="#ios" class="nav-button" onclick="showPanel('ios', this)">iOS</a>
     </div>
     
     <!-- Nội dung cho các panel -->
+     <!-- Panel thuộc PC -->
     <div id="pc-panel" class="content-panel active">
         <h2>PC Panel</h2>
         <div class="button-list">
@@ -55,7 +60,9 @@
             <!-- Thêm các nút khác tương tự -->
         </div>
     </div>
-    
+
+
+    <!-- Panel thuộc script -->
     <div id="script-panel" class="content-panel">
         <h2>Script Panel</h2>
         <div class="button-list">
@@ -73,8 +80,53 @@
                     <span class="button-subtitle">Free nên dùng</span>
                 </div>
             </a>
+
+           
             <!-- Thêm các nút khác tương tự -->
         </div>
+    </div>
+
+    <!-- Panel thuộc Androi -->
+    <div id="android-panel" class="content-panel">
+        <h2>Android Panel</h2>
+        <div class="button-list">
+            <a href="https://link4sub.com/mnfv " class="custom-button">
+                <img src="./img-cont/4-androi.jpg" alt="Icon" class="button-icon">
+                <div class="button-content">
+                    <span class="button-title">DELTA X VNG</span>
+                    <span class="button-subtitle">Phiên bản hỗ trợ Android</span>
+                </div>
+            </a>
+
+            <a href="https://link4sub.com/hE10" class="custom-button">
+                <img src="./img-cont/2.jpg" alt="Icon" class="button-icon">
+                <div class="button-content">
+                    <span class="button-title">Cryptic Androi</span>
+                    <span class="button-subtitle">Phiên bản hỗ trợ Android</span>
+                </div>
+            </a>
+
+         
+        </div>
+    </div>
+
+    <!-- Panel thuộc IOS -->
+
+    <div id="ios-panel" class="content-panel">
+        <h2>iOS Panel </h2>
+        <div class="button-list">
+            <a href="https://link4sub.com/lmzm " class="custom-button">
+                <img src="./img-cont/4-androi.jpg" alt="Icon" class="button-icon">
+                <div class="button-content">
+                    <span class="button-title">Cryptic for IOS</span>
+                    <span class="button-subtitle">Phiên bản hỗ trợ IOS ( sideloadly or esign )</span>
+                </div>
+            </a>
+
+           
+         
+        </div>
+        
     </div>
 
 
